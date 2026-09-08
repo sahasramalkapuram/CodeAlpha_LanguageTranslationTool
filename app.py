@@ -3,7 +3,7 @@ from deep_translator import GoogleTranslator
 import requests
 import re
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 
 # --------------------------------------------------
@@ -111,7 +111,6 @@ def translate():
         try:
             translated_text = GoogleTranslator(source=source, target=target).translate(text)
         except Exception:
-            # Fallback to auto-detection if source mismatch occurs
             translated_text = GoogleTranslator(source="auto", target=target).translate(text)
 
         if not translated_text:
