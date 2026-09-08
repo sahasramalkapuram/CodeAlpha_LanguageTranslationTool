@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+}
+
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.icon {
+
+    font-size: 40px;
+
+}
+
+
+header h1 {
+
+    font-size: 34px;
+
+    margin: 8px 0;
+
+}
+
+
+header p {
+
+    color: #666;
+
+    font-size: 16px;
+
+}
+
+
+.translator-box {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Languages */
+
+.language-section {
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.language-box {
+
+    flex: 1;
+
+}
+
+
+.language-box label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+.swap-button {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    background: #202632;
+
+    color: white;
+
+}
+
+
+/* Text Areas */
+
+.text-area-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.text-box {
+
+    position: relative;
+
+}
+
+
+textarea {
+
+    width: 100%;
+
+    height: 250px;
+
+    resize: none;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    background: #151922;
+
+    color: white;
+
+}
+
+
+textarea::placeholder {
+
+    color: #aaa;
+
+}
+
+
+textarea:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: #555;
+
+}
+
+
+#characterCount {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 12px;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+}
+
+
+/* Copy button */
+
+.copy-button {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 10px;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+
+/* Main button */
+
+.translate-button {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    background: #202632;
+
+    color: white;
+
+}
+
+
+.translate-button:hover {
+
+    opacity: 0.9;
+
+}
+
+
+.translate-button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+/* Clear */
+
+.clear-button {
+
+    display: block;
+
+    margin: 18px auto 0;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+/* Status */
+
+#statusMessage {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #777;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .text-area-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .language-section {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .swap-button {
+
+        align-self: center;
+
+    }
+
+
+    header h1 {
+
+        font-size: 27px;
+
+    }
+
+}
